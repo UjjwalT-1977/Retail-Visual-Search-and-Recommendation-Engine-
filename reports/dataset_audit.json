@@ -1,0 +1,19 @@
+{
+  "dataset_name": "Kaggle Fashion Product Images (Small)",
+  "seed": 42,
+  "raw_rows_loaded": 44424,
+  "missing_image_files_on_disk": 5,
+  "corrupt_zero_byte_files": 0,
+  "non_rgb_images_in_500_sample": 3,
+  "initial_unique_classes": 142,
+  "min_class_frequency_threshold": 100,
+  "near_duplicate_metadata_rows_removed": 12283,
+  "final_curated_classes_C": 51,
+  "final_curated_total_images": 29867,
+  "splits": {
+    "train": 20906,
+    "val": 4480,
+    "test": 4481
+  },
+  "leakage_check_passed": true
+}
