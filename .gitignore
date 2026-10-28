@@ -1,0 +1,7 @@
+data/raw/
+models/*.pth
+artifacts/embeddings/*.npy
+artifacts/index/*.faiss
+__pycache__/
+.ipynb_checkpoints/
+.venv/
