@@ -1,0 +1,9 @@
+{
+  "test_accuracy": 0.8175,
+  "test_macro_f1": 0.7467,
+  "test_top3_accuracy": 0.9625,
+  "backbone_only_precision_at_5": 0.7654,
+  "classifier_guided_precision_at_5": 0.8175,
+  "classifier_guided_recall_at_5": 0.0089,
+  "classifier_guided_map_at_5": 0.8175
+}
