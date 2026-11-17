@@ -2,3 +2,5 @@ experiment_id,checkpoint,split,accuracy,macro_f1,precision_at_5,recall_at_5,map,
 E0_majority_baseline,None (Rule-based majority),test,0.1906,0.0063,,,,,,Always predicts majority class (Tshirts); highlights class imbalance.
 E1_pretrained_resnet18_retrieval,ImageNet1K_ResNet18_Default,test,,,0.7654,0.0084,0.7226,0.2116,40.83,Off-the-shelf 512-D ImageNet features before retail training (Cosine similarity).
 E2_frozen_backbone_classifier,models/e2_frozen_resnet18.pth,test,0.8175,0.7467,0.8175,0.0089,0.8175,0.3035,40.83,"Frozen ResNet-18 + Linear(512,51) trained w/ CrossEntropy; raw 512-D P@5=0.7654, classifier-guided P@5=0.8175."
+Baseline_VGG16_PMC12367692,ImageNet1K_VGG16_ConvGAP,test,,,0.7617,0.0085,0.7173,0.2361,40.83,Reproduced Sabitha & Sundar (2025) VGG16+GAP 512-D retrieval baseline on deduplicated split.
+E3_finetuned_layer4_resnet18,models/e3_finetuned_resnet18.pth,test,0.8726,0.8293,0.8431,0.0097,0.8102,0.1981,40.83,Unfroze ResNet-18 layer4 (lr=1e-4) + head (lr=1e-3) w/ class-balanced CE & augmentation; pure 512-D cosine retrieval.
