@@ -4,3 +4,5 @@ E1_pretrained_resnet18_retrieval,ImageNet1K_ResNet18_Default,test,,,0.7654,0.008
 E2_frozen_backbone_classifier,models/e2_frozen_resnet18.pth,test,0.8175,0.7467,0.8175,0.0089,0.8175,0.3035,40.83,"Frozen ResNet-18 + Linear(512,51) trained w/ CrossEntropy; raw 512-D P@5=0.7654, classifier-guided P@5=0.8175."
 Baseline_VGG16_PMC12367692,ImageNet1K_VGG16_ConvGAP,test,,,0.7617,0.0085,0.7173,0.2361,40.83,Reproduced Sabitha & Sundar (2025) VGG16+GAP 512-D retrieval baseline on deduplicated split.
 E3_finetuned_layer4_resnet18,models/e3_finetuned_resnet18.pth,test,0.8726,0.8293,0.8431,0.0097,0.8102,0.1981,40.83,Unfroze ResNet-18 layer4 (lr=1e-4) + head (lr=1e-3) w/ class-balanced CE & augmentation; pure 512-D cosine retrieval.
+E4_metric_triplet_projection,models/e4_metric_triplet_head.pth,test,0.8757,0.8311,0.8661,0.01,0.8496,0.2571,40.83,Residual Metric Head trained w/ Joint Class-Balanced CE + Batch-Hard Cosine Triplet Loss (m=0.25).
+E5_faiss_index_benchmark,artifacts/index/product_index.faiss,test,N/A,N/A,0.8661,0.01,0.8496,0.0872,40.83,FAISS IndexFlatIP agreement=99.97% (0.0872ms); IVFFlat(nprobe=10) agreement=99.83% (0.0527ms).
